@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-app-ingress
+  namespace: default          # Adjust if your service is in a different namespace
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx     # Ensure this matches your Ingress controller class
+  rules:
+  - host: manoj.opsguru.online        # Replace with your desired domain
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-app-service   # Replace with your backend service name
+            port:
+              number: 80           # Replace with the appropriate target port
+
