@@ -5,9 +5,9 @@ metadata:
   namespace: default
 spec:
   secretName: example-com-tls
-  commonName: manoj.opsguru.online
+  commonName: your-domain.com
   dnsNames:
-    - manoj.opsguru.online
+    - your-domain.com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

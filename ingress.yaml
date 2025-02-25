@@ -9,10 +9,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - manoj.opsguru.online        # Replace with your actual domain
+    - your-domain.com        # Replace with your actual domain
     secretName: example-com-tls      # Replace with the name of your TLS secret
   rules:
-  - host: manoj.opsguru.online       # Replace with your actual domain
+  - host: your-domain.com       # Replace with your actual domain
     http:
       paths:
       - path: /
